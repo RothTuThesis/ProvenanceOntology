@@ -3,8 +3,8 @@
 {
 	imports = [ <nixpkgs/nixos/modules/profiles/graphical.nix> 
 	    	    <nixpkgs/nixos/modules/virtualisation/virtualbox-image.nix>
-		   		<nixpkgs/nixos/modules/profiles/clone-config.nix>	
-		   	    <nixpkgs/nixos/modules/installer/cd-dvd/channel.nix>	
+		    <nixpkgs/nixos/modules/profiles/clone-config.nix>	
+		    <nixpkgs/nixos/modules/installer/cd-dvd/channel.nix>	
 		  ];
 
 	security.audit.enable = true;
@@ -25,6 +25,8 @@
 		home = "/home/testResearcher1/";
 		description = "Test Researcher 1";
 		extraGroups = [ "wheel" "networkmanager" ];
+		password = "tuwien";
+	};
 	
 	environment = {
 		systemPackages = with pkgs; [
